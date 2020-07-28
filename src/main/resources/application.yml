@@ -1,0 +1,28 @@
+#security:
+# oauth2:
+#  client:
+#   clientId: 2619239811661242
+#   clientSecret: 299f1b0652b4950553733c142a310d0a
+#   accessTokenUri: https://graph.facebook.com/oauth/access_token 
+#   userAuthorizationUri: https://www.facebook.com/dialog/oauth
+#   tokenName: oauth_token
+#   authenticationScheme: query
+#   clientAuthenticationScheme: form
+#  resource:
+#   userInfoUri: https://graph.facebook.com/me
+
+security:
+ oauth2:
+  client:
+   clientId: 7c0a9b3f5045194e381e
+   clientSecret: 445ee10f9e8e55f8f8fe319ef046f6c0d4c5a4a6
+   accessTokenUri: https://github.com/login/oauth/access_token
+   userAuthorizationUri: https://github.com/login/oauth/authorize
+   tokenName: oauth_token
+   authenticationScheme: query
+   clientAuthenticationScheme: form
+  resource:
+   userInfoUri: https://api.github.com/user
+
+#with above settings, spring security will look at configuration as it is oauth2sso app , look at configuration in yml file and do an oauth call to facebook and ignores what to call what acknowledgment to get
+#with authorization token and will get access token in return. this is the authorization flow that we will follow
